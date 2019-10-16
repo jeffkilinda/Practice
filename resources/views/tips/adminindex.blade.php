@@ -17,8 +17,8 @@
         <th>Away </th>
         <th>Tip</th>
         <th>Odds</th>
-        
-       
+        <th>Edit</th>
+        <th>Delete</th>
       </tr>
     </thead>
     <tbody>
@@ -40,7 +40,13 @@
         <td>{{$tip->tip}} </td>
         <td> {{$tip->odd}} </td>
         
-        {{-- <td> <a href="/tips/{{$tip->id}}">More Analysis </a></td> --}}
+        <td> <a href="/tips/{{$tip->id}}/edit">Edit </a></td> 
+        <td>
+       {!!Form::open(['action' => ['TipsController@destroy', $tip->id], 'method' => 'POST'])!!}
+       {{Form::hidden('_method','DELETE')}}
+       {{Form::submit('Delete',['class' => 'btn btn-danger'])}}
+       {!!Form::close() !!}
+        </td>
         
     </tr>
        

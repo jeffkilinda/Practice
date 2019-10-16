@@ -24,6 +24,13 @@ class TipsController extends Controller
         return view('tips.index')->with('tips', $tips);
     }
 
+
+    public function adminindex() {
+      $tips = Tip::Where('date',Carbon::now()->format('Y-m-d'))->get();
+       return view('tips.adminindex')->with('tips', $tips);
+   }
+
+
     public function topTips() {
        
        $tips = Tip::Where('tip_type','top')->get();
@@ -133,7 +140,8 @@ class TipsController extends Controller
      */
     public function edit($id)
     {
-        //
+      $tip = Tip::find($id);
+      return view('tips.edit')->with('tip',$tip);
     }
 
     /**
@@ -145,7 +153,32 @@ class TipsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $this->validate($request, [
+         'date' => 'required',
+         
+         'time' => 'required|date_format:H:i',
+         'league' => 'required',
+         'team1' => 'required',
+         'team2' => 'required',
+         'tip' => 'required',
+         'odd' => 'required',
+         'type' => 'required',
+         'results' => 'required'
+     ]);
+        $tip = Tip::find($id);
+        $tip->date = $request->input('date');
+        $tip->time = $request->input('time');
+        $tip->league = $request->input('league');
+        $tip->team1 = $request->input('team1');
+        $tip->team2 = $request->input('team2');
+        $tip->tip = $request->input('tip');
+        $tip->odd = $request->input('odd');
+        $tip->tip_type = $request->input('type');
+        $tip->results = $request->input('results');
+        $tip->save();
+      
+        
+        return redirect('/adminindex')->with('success', 'Tip updated successfully');
     }
 
     /**
@@ -156,6 +189,9 @@ class TipsController extends Controller
      */
     public function destroy($id)
     {
-        //
+      
+       $tip = Tip::find($id);
+       $tip->delete();
+       return redirect('/adminindex')->with('success', 'Tip deleted');
     }
 }

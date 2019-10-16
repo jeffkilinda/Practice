@@ -41,6 +41,8 @@ Route::get('/laliga', 'TipsController@laliga');
 
 Route::get('/yesterday', 'TipsController@yesterday');
 
+Route::get('/adminindex', 'TipsController@adminindex');
+
 Route::get('/about', 'PagesController@about');
 
 Route::get('/services', 'PagesController@services');
