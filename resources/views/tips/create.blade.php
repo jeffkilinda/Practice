@@ -66,27 +66,15 @@
 
 <div class="form-group">
   {{Form::label('type_id','Tip')}}
-  {{Form::select('type_id', [''=>'Select type']+$type, null, ['class' => 'form-control'])}}<br>
+  {{Form::select('type_id', $type, null, ['class' => 'form-control'])}}<br>
   @if($errors->has('type_id'))<strong class="text-danger">{{ $errors->first('type_id') }}
   </strong><br>@endif
 </div>
   
 
-<div class="form-group">
-  {{Form::label('results','Results')}}
-  {{Form::text('results','_-_',['class' => 'form-control'])}}<br>
-  @if($errors->has('results'))<strong class="text-danger">{{ $errors->first('results') }}
-  </strong><br>@endif
-  
-</div>
 
-<div class="form-group">
-  {{Form::label('status_id','Status')}}
-  {{Form::select('status_id', [''=>'Select status']+$status, null, ['class' => 'form-control'])}}<br>
-  @if($errors->has('status_id'))<strong class="text-danger">{{ $errors->first('status_id') }}
-  </strong><br>@endif
-</div>
-    
+
+
   <div class="form-group">
     {{Form::submit('Post', ['class' => 'btn btn-primary']) }}
  </div>
