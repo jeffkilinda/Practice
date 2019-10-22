@@ -23,9 +23,9 @@ class CreateTipsTable extends Migration
             $table->bigInteger('prediction_id');
             $table->string('odd', 4, 2);
             
-            $table->string('results');
-            $table->bigInteger('status_id');
-            $table->bigInteger('type_id');
+            $table->string('results')->default('_-_');
+            $table->bigInteger('status_id')->default(1);
+            $table->bigInteger('type_id')->default(1);
 
             
             $table->timestamps();

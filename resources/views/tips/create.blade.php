@@ -74,7 +74,7 @@
 
 <div class="form-group">
   {{Form::label('results','Results')}}
-  {{Form::text('results','',['class' => 'form-control'])}}<br>
+  {{Form::text('results','_-_',['class' => 'form-control'])}}<br>
   @if($errors->has('results'))<strong class="text-danger">{{ $errors->first('results') }}
   </strong><br>@endif
   
