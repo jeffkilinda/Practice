@@ -45,5 +45,13 @@
         
         </main>
     </div>
+
+    <footer id="footer" class="footer mt-auto py-3 text-center">
+        <div class="container">
+            <p>&copy; Superpredictions 2019</p>
+        </div>
+      </footer>
 </body>
 </html>
+
+

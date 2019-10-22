@@ -14,9 +14,11 @@
        
         <th>League</th>
         <th>Home </th>
+
         <th>Away </th>
         <th>Tip</th>
         <th>Odds</th>
+        <th>status</th>
         
        
       </tr>
@@ -37,8 +39,9 @@
         <td>{{$tip->team1}}</td>
         
         <td>{{$tip->team2}}</td>
-        <td>{{$tip->tip}} </td>
+        <td>{{$tip->prediction->name}} </td>
         <td> {{$tip->odd}} </td>
+        <td>{{$tip->status->name}} </td>
         
         {{-- <td> <a href="/tips/{{$tip->id}}">More Analysis </a></td> --}}
         

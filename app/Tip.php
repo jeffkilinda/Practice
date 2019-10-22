@@ -14,4 +14,19 @@ class Tip extends Model
 
     //Timestamps
     public $timestamps = true;
+
+    public function prediction(){
+        return $this->belongsTo('App\Prediction');
+        
+           }
+
+           public function status(){
+            return $this->belongsTo('App\Status');
+            
+               }
+
+               public function type(){
+                return $this->belongsTo('App\Type');
+                
+                   }
 }

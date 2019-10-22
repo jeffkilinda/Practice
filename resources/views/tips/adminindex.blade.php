@@ -37,7 +37,7 @@
         <td>{{$tip->team1}}</td>
         
         <td>{{$tip->team2}}</td>
-        <td>{{$tip->tip}} </td>
+        <td>{{$tip->prediction->name}} </td>
         <td> {{$tip->odd}} </td>
         
         <td> <a href="/tips/{{$tip->id}}/edit">Edit </a></td> 

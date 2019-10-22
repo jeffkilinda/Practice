@@ -4,8 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Tip;
+use App\Prediction;
+use App\Status;
+use App\Type;
 use DB; 
 use Carbon\Carbon;
+
 
 class TipsController extends Controller
 {
@@ -77,7 +81,11 @@ class TipsController extends Controller
      */
     public function create()
     {
-        return view('tips.create');
+       //fetch from other tables for dropdown lists
+       $prediction = Prediction::pluck('name','id')->all();
+       $status = Status::pluck('name','id')->all();
+       $type = Type::pluck('name','id')->all();
+        return view('tips.create',compact('prediction','status','type'));
     }
 
     /**
@@ -90,15 +98,16 @@ class TipsController extends Controller
     {
         $this->validate($request, [
             'date' => 'required',
-            
             'time' => 'required|date_format:H:i',
             'league' => 'required',
             'team1' => 'required',
             'team2' => 'required',
-            'tip' => 'required',
+            'prediction_id' => 'required',
             'odd' => 'required',
             'type' => 'required',
-            'results' => 'required'
+            'results' => 'required',
+            'status_id' => 'required',
+            'type_id' => 'required'
         ]);
            $tip = new Tip;
            $tip->date = $request->input('date');
@@ -106,10 +115,12 @@ class TipsController extends Controller
            $tip->league = $request->input('league');
            $tip->team1 = $request->input('team1');
            $tip->team2 = $request->input('team2');
-           $tip->tip = $request->input('tip');
+           $tip->prediction_id = $request->input('prediction_id');
            $tip->odd = $request->input('odd');
            $tip->tip_type = $request->input('type');
            $tip->results = $request->input('results');
+           $tip->status_id = $request->input('status_id');
+           $tip->type_id = $request->input('type_id');
            $tip->save();
          
            
@@ -140,8 +151,11 @@ class TipsController extends Controller
      */
     public function edit($id)
     {
-      $tip = Tip::find($id);
-      return view('tips.edit')->with('tip',$tip);
+      $tip = Tip::findOrFail($id);
+      $prediction = Prediction::pluck('name','id')->all();
+      $status = Status::pluck('name','id')->all();
+      $type = Type::pluck('name','id')->all();
+      return view('tips.edit',compact('tip','prediction','status','type'));
     }
 
     /**
@@ -160,10 +174,12 @@ class TipsController extends Controller
          'league' => 'required',
          'team1' => 'required',
          'team2' => 'required',
-         'tip' => 'required',
+         'prediction_id' => 'required',
          'odd' => 'required',
          'type' => 'required',
-         'results' => 'required'
+         'results' => 'required',
+         'status_id' => 'required',
+         'type_id' => 'required'
      ]);
         $tip = Tip::find($id);
         $tip->date = $request->input('date');
@@ -171,10 +187,12 @@ class TipsController extends Controller
         $tip->league = $request->input('league');
         $tip->team1 = $request->input('team1');
         $tip->team2 = $request->input('team2');
-        $tip->tip = $request->input('tip');
+        $tip->prediction_id = $request->input('prediction_id');
         $tip->odd = $request->input('odd');
         $tip->tip_type = $request->input('type');
         $tip->results = $request->input('results');
+        $tip->status_id = $request->input('status_id');
+        $tip->type_id = $request->input('type_id');
         $tip->save();
       
         
