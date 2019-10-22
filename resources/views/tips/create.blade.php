@@ -68,16 +68,17 @@
   {{Form::label('type_id','Tip')}}
   {{Form::select('type_id', [''=>'Select type']+$type, null, ['class' => 'form-control'])}}<br>
   @if($errors->has('type_id'))<strong class="text-danger">{{ $errors->first('type_id') }}
-  </strong>@endif
+  </strong><br>@endif
 </div>
   
 
-
- 
-  {{Form::hidden('results','_-_',['class' => 'form-control'])}}<br>
- 
+<div class="form-group">
+  {{Form::label('results','Results')}}
+  {{Form::text('results','',['class' => 'form-control'])}}<br>
+  @if($errors->has('results'))<strong class="text-danger">{{ $errors->first('results') }}
+  </strong><br>@endif
   
-
+</div>
 
 <div class="form-group">
   {{Form::label('status_id','Status')}}

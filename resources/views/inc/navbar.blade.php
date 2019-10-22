@@ -17,11 +17,11 @@
                         <a class="nav-link" href="/">Home</a>
                       </li>
 
-                    @if(Auth::user())
+                    
                       <li class="nav-item">
                         <a class="nav-link" href="/top">Top Tips</a>
                       </li>
-                    @endif
+                    
 
                       <li class="nav-item">
                         <a class="nav-link" href="/yesterday">Previous Winnings</a>
@@ -54,6 +54,10 @@
 
                   <!-- Right Side Of Navbar -->
                   <ul class="navbar-nav ml-auto navbar-right">
+
+                        <li class="nav-item">
+                                <a class="nav-link" href="/tips/create">Create Tip</a>
+                              </li>
                       <!-- Authentication Links -->
                       @guest
                           <li class="nav-item">

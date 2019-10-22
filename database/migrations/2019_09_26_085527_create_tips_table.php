@@ -22,7 +22,7 @@ class CreateTipsTable extends Migration
             $table->string('team2');
             $table->bigInteger('prediction_id');
             $table->string('odd', 4, 2);
-            $table->boolean('tip_type');
+            
             $table->string('results');
             $table->bigInteger('status_id');
             $table->bigInteger('type_id');

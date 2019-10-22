@@ -104,7 +104,7 @@ class TipsController extends Controller
             'team2' => 'required',
             'prediction_id' => 'required',
             'odd' => 'required',
-            'type' => 'required',
+
             'results' => 'required',
             'status_id' => 'required',
             'type_id' => 'required'
@@ -117,7 +117,7 @@ class TipsController extends Controller
            $tip->team2 = $request->input('team2');
            $tip->prediction_id = $request->input('prediction_id');
            $tip->odd = $request->input('odd');
-           $tip->tip_type = $request->input('type');
+          
            $tip->results = $request->input('results');
            $tip->status_id = $request->input('status_id');
            $tip->type_id = $request->input('type_id');
@@ -176,7 +176,7 @@ class TipsController extends Controller
          'team2' => 'required',
          'prediction_id' => 'required',
          'odd' => 'required',
-         'type' => 'required',
+        
          'results' => 'required',
          'status_id' => 'required',
          'type_id' => 'required'
@@ -189,7 +189,7 @@ class TipsController extends Controller
         $tip->team2 = $request->input('team2');
         $tip->prediction_id = $request->input('prediction_id');
         $tip->odd = $request->input('odd');
-        $tip->tip_type = $request->input('type');
+       
         $tip->results = $request->input('results');
         $tip->status_id = $request->input('status_id');
         $tip->type_id = $request->input('type_id');
