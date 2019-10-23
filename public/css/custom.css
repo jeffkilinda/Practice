@@ -119,3 +119,9 @@ tr:last-child {
     color:#fff;
     background: gray;
 }
+
+
+.btn-custom {
+    margin: 10px 0;
+
+}

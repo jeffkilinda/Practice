@@ -124,7 +124,7 @@ class TipsController extends Controller
 
            $tip->status_id = $request->input('status_id');
            */
-          
+
            $tip->save();
          
            
@@ -200,7 +200,7 @@ class TipsController extends Controller
         $tip->save();
       
         
-        return redirect('/adminindex')->with('success', 'Tip updated successfully');
+        return redirect('/')->with('success', 'Tip updated successfully');
     }
 
     /**
@@ -214,6 +214,6 @@ class TipsController extends Controller
       
        $tip = Tip::find($id);
        $tip->delete();
-       return redirect('/adminindex')->with('success', 'Tip deleted');
+       return redirect('/')->with('success', 'Tip deleted');
     }
 }
