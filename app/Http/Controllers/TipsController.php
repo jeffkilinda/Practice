@@ -28,52 +28,6 @@ class TipsController extends Controller
         return view('tips.index')->with('tips', $tips);
     }
 
-
-    public function adminindex() {
-      $tips = Tip::Where('date',Carbon::now()->format('Y-m-d'))->get();
-       return view('tips.adminindex')->with('tips', $tips);
-   }
-
-
-    public function topTips() {
-       
-       $tips = Tip::Where('tip_type','top')->get();
-       return view('tips.top')->with('tips', $tips);
-    }
-
-    public function yesterday() {
-       
-        $tips = Tip::Where('date',Carbon::yesterday()->format('Y-m-d'))->get();
-        return view('tips.yesterday')->with('tips', $tips);
-     }
-
-     public function epl() {
-        //$tips = Tip::Where([['league','epl'], ['tip_type','top']])->get();
-        
-        $tips = Tip::Where([['league','epl'], ['date',Carbon::now()->format('Y-m-d')]])->get();
-        return view('tips.leagues.epl')->with('tips', $tips);
-     }
-
-     public function serieA() {
-        $tips = Tip::Where([['league','serie A'], ['date',Carbon::now()->format('Y-m-d')]])->get();
-        return view('tips.leagues.serieA')->with('tips', $tips);
-     }
-
-     public function bundesliga() {
-        $tips = Tip::Where([['league','bundesliga'], ['date',Carbon::now()->format('Y-m-d')]])->get();
-        return view('tips.leagues.bundesliga')->with('tips', $tips);
-     }
-
-     public function eredivisie() {
-        $tips = Tip::Where([['league','Eredivisie'], ['date',Carbon::now()->format('Y-m-d')]])->get();
-        return view('tips.leagues.eredivisie')->with('tips', $tips);
-     }
-
-     public function laliga() {
-        $tips = Tip::Where([['league','laliga'], ['date',Carbon::now()->format('Y-m-d')]])->get();
-        return view('tips.leagues.laliga')->with('tips', $tips);
-     }
-     
     /**
      * Show the form for creating a new resource.
      *
@@ -145,8 +99,6 @@ class TipsController extends Controller
     }
 
    
-
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -216,4 +168,57 @@ class TipsController extends Controller
        $tip->delete();
        return redirect('/')->with('success', 'Tip deleted');
     }
+
+
+    /*custom functions to fetch dffnt data */
+
+public function adminindex() {
+   $tips = Tip::Where('date',Carbon::now()->format('Y-m-d'))->get();
+    return view('tips.adminindex')->with('tips', $tips);
 }
+
+
+ public function topTips() {
+     
+  // $tips = Tip::Where('type_id','2')->get();
+   
+  $tips = Tip::Where([['type_id','2'], ['date',Carbon::now()->format('Y-m-d')]])->get();
+    return view('tips.top')->with('tips', $tips);
+ }
+
+ public function yesterday() {
+    
+     $tips = Tip::Where('date',Carbon::yesterday()->format('Y-m-d'))->get();
+     return view('tips.yesterday')->with('tips', $tips);
+  }
+
+  public function epl() {
+     //$tips = Tip::Where([['league','epl'], ['tip_type','top']])->get();
+     
+     $tips = Tip::Where([['league','epl'], ['date',Carbon::now()->format('Y-m-d')]])->get();
+     return view('tips.leagues.epl')->with('tips', $tips);
+  }
+
+  public function serieA() {
+     $tips = Tip::Where([['league','serie A'], ['date',Carbon::now()->format('Y-m-d')]])->get();
+     return view('tips.leagues.serieA')->with('tips', $tips);
+  }
+
+  public function bundesliga() {
+     $tips = Tip::Where([['league','bundesliga'], ['date',Carbon::now()->format('Y-m-d')]])->get();
+     return view('tips.leagues.bundesliga')->with('tips', $tips);
+  }
+
+  public function eredivisie() {
+     $tips = Tip::Where([['league','Eredivisie'], ['date',Carbon::now()->format('Y-m-d')]])->get();
+     return view('tips.leagues.eredivisie')->with('tips', $tips);
+  }
+
+  public function laliga() {
+     $tips = Tip::Where([['league','laliga'], ['date',Carbon::now()->format('Y-m-d')]])->get();
+     return view('tips.leagues.laliga')->with('tips', $tips);
+  }
+  
+}
+
+

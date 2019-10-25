@@ -1,11 +1,15 @@
+    
+ 
+
 @extends('layouts.app')
 
 
 
 @section('content')
     
-
-   <table class="table">
+@if (Auth::user() && Auth::user()->role_id == '1')
+ 
+    <table class="table">
     <thead>
 <tr align="center"><td colspan="6"><h1>Daily Tips</h1><br>
 <h5>{{date("Y/m/d")}}   </h5></td></tr>
@@ -61,5 +65,9 @@
    
 </tbody>
 </table>
+
+@else
+   <h2 style="text-align:center;color:red;">You are not an Admin</h2>
+   @endif 
 @endsection
 

@@ -1,9 +1,12 @@
+
+
+
 @extends('layouts.app')
 
 
-
 @section('content')
-    
+@if (Auth::user() && Auth::user()->role_id == '1')
+ 
 <div class="form-wrapper">
 <h1>Post Tips</h1>
 
@@ -76,5 +79,10 @@
 </div>
 
 </div>
+
+@else
+   <h2 style="text-align:center;color:red;">You are not an Admin</h2>
+   @endif 
     
 @endsection
+

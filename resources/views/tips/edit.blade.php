@@ -1,6 +1,10 @@
+   
+   
+
 @extends('layouts.app')
 
-
+@if (Auth::user() && Auth::user()->role_id == '1')
+  
 
 @section('content')
     
@@ -60,5 +64,11 @@
  
 
 </div>
+
+@else
+   <h2 style="text-align:center;color:red;">You are not an Admin</h2>
+   
+
+@endif 
     
 @endsection

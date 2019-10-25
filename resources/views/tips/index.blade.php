@@ -79,6 +79,7 @@
 
    @else
    
+   
      
    <td colspan="7"> <h2 style="text-align:center;">OOOps! Tips for Today Not Found</h2></td>
    @endif
