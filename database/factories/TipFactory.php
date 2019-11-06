@@ -10,7 +10,7 @@ $factory->define(Tip::class, function (Faker $faker) {
     return [
         
         //'date'=>$faker->date('Y-m-d'),
-        'date'=>$faker->randomElement($array = array ('2019-10-24')),
+        'date'=>$faker->randomElement($array = array ('2019-11-06')),
         'time'=>$faker->time('h:i'),
         'league'=>$faker->randomElement($array = array ('Champions League','Europa League','Premier League','Championship')), // 'b'
         'team1'=>$faker->randomElement($array = array ('Arsenal','Chelsea','Man U','Man City','Everton','Torino','Juventus','Bayern Munich','Barcelona','Real Madrid','Atalanta')),

@@ -70,7 +70,6 @@
 
   
 
-
   <div class="form-group">
     {{Form::submit('Add', ['class' => 'btn btn-primary']) }}
  </div>

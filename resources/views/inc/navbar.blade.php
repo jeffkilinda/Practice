@@ -13,6 +13,13 @@
 
                   </ul>
                   <ul class="navbar-nav mr-auto">
+
+                        @if (Auth::user() && Auth::user()->role_id == '1')
+                        <li class="nav-item ">
+                                <a class="nav-link" href="/messages">Messages</a>
+                              </li>
+                      @endif 
+
                       <li class="nav-item ">
                         <a class="nav-link" href="/">Home</a>
                       </li>
@@ -47,8 +54,17 @@
                         </li> 
 
                         <li class="nav-item">
-                            <a class="nav-link" href="/posts">Contact Us</a>
+                                <a class="nav-link" href="/privacy-policy">Privacy Policy</a>
+                              </li>
+                              <li class="nav-item">
+                                    <a class="nav-link" href="/terms-of-use">Terms</a>
+                                  </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about">About Us</a>
                           </li>
+                          <li class="nav-item">
+                                <a class="nav-link" href="/messages/create">Contact Us</a>
+                              </li>
                      
                     </ul>
 
@@ -57,7 +73,10 @@
 
                         
                       <!-- Authentication Links -->
+
+                     
                       @guest
+                       {{--
                           <li class="nav-item">
                               <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                           </li>
@@ -66,11 +85,13 @@
                                   <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                               </li>
                           @endif
+                          --}}
                       @else
                           <li class="nav-item dropdown">
                               <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                  {{ Auth::user()->name }} <span class="caret"></span>
+                                  {{ Auth::user()->name }} 
                               </a>
+                              
 
                               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                   <a class="dropdown-item" href="{{ route('logout') }}"
@@ -85,6 +106,7 @@
                               </div>
                           </li>
                       @endguest
+                      
                   </ul>
               </div>
           </div>

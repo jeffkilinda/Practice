@@ -21,8 +21,9 @@ class PostsController extends Controller
        // $posts = Post::Where('title','Post two')->get(); //query specific post
         //$posts = DB::select('SELECT * FROM posts where created_at >= CAST(NOW() - INTERVAL 1 DAY AS DATE) AND created_at <= CAST(NOW() AS DATE)');
         
-        $posts = Post::all();
+        //$posts = Post::all();
         
+         $posts = Post::OrderBy('id','desc')->paginate(2);
         return view('posts.index')->with('posts',$posts);
 
         

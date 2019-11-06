@@ -13,7 +13,7 @@ class Post extends Model
     public $primaryKey = 'id';
 
     //Timestamps    false will not display
-    public $timestamps = false;
+    public $timestamps = true;
 
 
 }

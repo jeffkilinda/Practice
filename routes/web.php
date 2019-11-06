@@ -53,7 +53,7 @@ Route::get('/privacy-policy', 'PagesController@privacy');
 
 Route::get('/disclaimer', 'PagesController@disclaimer');
 
-Route::resource('posts','PostsController');
+Route::resource('messages','PostsController');
 
 Route::resource('tips', 'TipsController');
 

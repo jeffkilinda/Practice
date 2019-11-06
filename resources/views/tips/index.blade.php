@@ -71,13 +71,10 @@
           <img style="float:right;" src="{{ asset('images/won.png')}}" alt="✓"> </td>
         
        @else
-        <td>{{$tip->prediction->name}} <strong style="color:green;float:right;">&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+        <td>{{$tip->prediction->name}}<strong style="color:green;float:right;">
+          &nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
       @endif 
         
-
-      
-
-
 
         <td> {{$tip->odd}} </td>
         {{-- <td>{{$tip->status->name}} </td> --}}
