@@ -15,8 +15,23 @@ class PagesController extends Controller
   }
 
 public function about(){
-   $title = 'About us page reloaded';
-   return view('pages.about')->with('title', $title);
+   
+   return view('pages.about');
+}
+
+public function disclaimer(){
+  
+   return view('pages.disclaimer');
+}
+
+public function termsofuse(){
+  
+   return view('pages.termsofuse');
+}
+
+public function privacy(){
+  
+   return view('pages.privacy');
 }
 
 public function services(){

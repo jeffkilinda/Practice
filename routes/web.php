@@ -45,7 +45,13 @@ Route::get('/adminindex', 'TipsController@adminindex');
 
 Route::get('/about', 'PagesController@about');
 
+Route::get('/terms-of-use', 'PagesController@termsofuse');
+
 Route::get('/services', 'PagesController@services');
+
+Route::get('/privacy-policy', 'PagesController@privacy');
+
+Route::get('/disclaimer', 'PagesController@disclaimer');
 
 Route::resource('posts','PostsController');
 

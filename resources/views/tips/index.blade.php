@@ -53,21 +53,32 @@
         
         @if (Auth::user() && Auth::user()->role_id == '1')
         
-        <td><a href="/tips/{{$tip->id}}/edit"> {{$tip->league}}</a> </td>
-
+        <td class="league"><a href="/tips/{{$tip->id}}/edit"> {{$tip->league}}</a> </td>
 
         @else
-        <td>{{$tip->league}} </td>
+        <td class="league">{{$tip->league}} </td>
       @endif 
-        
-    
-        
-        
-        
+      
         <td>{{$tip->team1}}</td>
         <td>{{$tip->results}}</td>
         <td>{{$tip->team2}}</td>
-        <td>{{$tip->prediction->name}} </td>
+
+      
+     
+
+      @if ($tip->status_id == '2')
+        <td>{{$tip->prediction->name}} 
+          <img style="float:right;" src="{{ asset('images/won.png')}}" alt="✓"> </td>
+        
+       @else
+        <td>{{$tip->prediction->name}} <strong style="color:green;float:right;">&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+      @endif 
+        
+
+      
+
+
+
         <td> {{$tip->odd}} </td>
         {{-- <td>{{$tip->status->name}} </td> --}}
         
