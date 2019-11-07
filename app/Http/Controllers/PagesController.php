@@ -34,6 +34,11 @@ public function privacy(){
    return view('pages.privacy');
 }
 
+public function faqs(){
+  
+   return view('pages.faqs');
+}
+
 public function services(){
 
    $data = array(

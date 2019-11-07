@@ -23,8 +23,9 @@ class TipsController extends Controller
        //$tips = DB::select('SELECT * FROM tips where 'date'CAST(NOW()');
       // $tips = Tip::Where('tip_type','EPL')->get();
        
-        $tips = Tip::Where('date',Carbon::now()->format('Y-m-d'))->get();
+       // $tips = Tip::Where('date',Carbon::now()->format('Y-m-d'))->get();
         
+       $tips = Tip::Where('date',Carbon::now()->format('Y-m-d'))->orderBy('id','desc')->get();
         return view('tips.index')->with('tips', $tips);
     }
 

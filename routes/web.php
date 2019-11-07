@@ -53,11 +53,13 @@ Route::get('/privacy-policy', 'PagesController@privacy');
 
 Route::get('/disclaimer', 'PagesController@disclaimer');
 
+Route::get('/faqs', 'PagesController@faqs');
+
 Route::resource('messages','PostsController');
 
 Route::resource('tips', 'TipsController');
 
-Auth::routes();
+Auth::routes();    
 
 Route::get('/home', 'HomeController@index')->name('home');
 

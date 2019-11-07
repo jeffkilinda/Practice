@@ -28,6 +28,9 @@
                   <li>
                     <a href="/disclaimer">Disclaimer</a>
                   </li>
+                  <li>
+                    <a href="/faqs">Faqs</a>
+                  </li>
                 </ul>
         
               </div>
@@ -94,7 +97,7 @@
   
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3">
-            &copy; Superpredictions 2019
+            &copy; 2019 All rights reserved: superbetpredictions
     </div>
     <!-- Copyright -->
   

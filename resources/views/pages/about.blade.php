@@ -6,7 +6,7 @@
     <div class="pages-div">
 
         
-<h2>SuperPredictions</h2>
+<h2>SuperbetPredictions</h2>
 
 <p>SuperPredictions is all about Football statistics, match predictions, bet tips, expert reviews and bet information. 
 We cover all the major football events across Europe and the world. 
@@ -18,7 +18,7 @@ to gamble safely and resposibly</p>
       make real 
 money in gambling</p>
 
-<p>SuperPredictions works with the qualified and expert analysers in 
+<p>Superbet bet bet Predictions works with the qualified and expert analysers in 
     the world to guarantee sure betting tips.
 Every day, hundredss of users come back to our site thanking us for real winnings through our tips. </p>
 

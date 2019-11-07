@@ -181,6 +181,143 @@ footer.page-footer .footer-copyright {
     margin: 10px;
     box-shadow: 1px 1px 1px 5px #888888;
 
-
-
   }
+
+
+  * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+
+
+
+.accordion {
+    background-color: transparent;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+
+.mainbody-vent {
+    width: 100%;
+    
+    margin: auto;
+    text-align: left;
+    padding-top: 10px;
+    background: white;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+
+
+.TravelPlansp1 {
+    text-align: left;
+    font-size: 14px;
+    color: #303638;
+    font-weight: bold;
+    line-height: 22px;
+}
+
+TravelPlansp1 h1 {
+    font-size: 18px;
+    color: #303638/*#5577AA*/;
+    line-height: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+	
+	margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.TravelPlansp1 img {
+    width: 1168px;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+	 border: 0;
+}
+
+.FaQ {
+    font-size: 16px;
+    text-align: left;
+    line-height: 20px;
+    margin-top: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.FaQ h1 {
+    padding-left: 0px;
+    border-bottom: 1px solid #BEBEBF;
+    line-height: 35px;
+    font-size: 16px;
+    font-family: "Times New Roman", Times, serif;
+    color: #303638;
+    margin-bottom: 10px;
+}
+
+
+.accordion {
+    display: block;
+    font-weight: bold;
+    color: #303638;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.panel {
+    background-color: #F9F9F9;
+    border-bottom: 1px dotted #2F4F4F;
+    color: #303638;
+    font-size: 16px;
+    padding: 10px 0px 10px 10px;
+}
+
+.panel a {
+    text-decoration: none;
+}
+
+	.panel p {
+    margin-top: 10px;
+}
+
+.clear {
+    clear: both;
+}

@@ -32,7 +32,7 @@ your use of our site with our social media, advertising and analytics partners.<
 <h4>Information Collection and Use</h4>
 
 <p>
-Super Predictions website is built as as an Ad Supported website. This SERVICE is provided free of charge and is intended for use appers.
+Superbet Predictions website is built as as an Ad Supported website. This SERVICE is provided free of charge and is intended for use as it appears.
 We do not collect information from users however,the website make use of third party services that may collect information used to identify you 
 for various purposes to provide and improve our Service to you.</p>
 
@@ -71,7 +71,7 @@ you may not be able to use some portions of our Service.</p>
 
 <h4>Use of Data</h4>
 
-<p>SuperPredictions uses the collected data for various purposes:</p>    
+<p>Superbet Predictions uses the collected data for various purposes:</p>    
 <ul>
     <li>To provide and maintain the Service</li>
     <li>To notify you about changes to our Service</li>
@@ -91,17 +91,17 @@ you may not be able to use some portions of our Service.</p>
 <p>If you are located outside KENYA and choose to provide information to us, please note that we transfer the data, including Personal Data, 
 to KENYA and process it there.</p>
 <p>Your consent to this Privacy Policy followed by your submission of such information represents your agreement to that transfer.</p>
-<p>SuperPredictions will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with this 
+<p>Superbet Predictions will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with this 
 Privacy Policy and no transfer of your Personal Data will take place to an organization or a country unless there are adequate controls 
 in place including the security of your data and other personal information.</p>
 
 <h4>Disclosure Of Data</h4>
 
 <h3>Legal Requirements</h3>
-<p>SuperPredictions may disclose your Personal Data in the good faith belief that such action is necessary to:</p>
+<p>Superbet Predictions may disclose your Personal Data in the good faith belief that such action is necessary to:</p>
 <ul>
     <li>To comply with a legal obligation</li>
-    <li>To protect and defend the rights or property of SuperPredictions</li>
+    <li>To protect and defend the rights or property of Superbet Predictions</li>
     <li>To prevent or investigate possible wrongdoing in connection with the Service</li>
     <li>To protect the personal safety of users of the Service or the public</li>
     <li>To protect against legal liability</li>
@@ -137,8 +137,8 @@ on this page.</p>
 <h4>Contact Us</h4>
 <p>If you have any questions about this Privacy Policy, please contact us:</p>
 <ul>
-        <li>By email: info@superpredictions.com</li>
-            <li>By visiting this page on our website: <a href="http://www.superpredictions.com/contact">superpredictions.com/contact</a></li>
+        <li>By email: info@Superbet predictions.com</li>
+            <li>By visiting this page on our website: <a href="http://www.Superbetpredictions.com/messages/create">Superbet predictions.com/messages/create</a></li>
       
         <li>By phone number:  0762343385</li>
         </ul>
