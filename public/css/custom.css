@@ -115,10 +115,25 @@ tr:last-child {
 }
 
 #footer {
-
-    color:#fff;
+    color: #fff;
+    width: 100%;
+    margin: auto;
     background: gray;
 }
+
+
+@media (min-width: 768px){
+    #footer {
+        color: #fff;
+        width: 70%;
+        margin: auto;
+        background: gray;
+    }
+    }
+
+
+
+
 
 #footer a {
 
