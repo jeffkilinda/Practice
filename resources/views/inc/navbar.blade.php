@@ -1,7 +1,8 @@
       <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
           <div class="container">
               <a class="navbar-brand" href="{{ url('/') }}">
-                <img style="width:225px; height:225px" src="{{ asset('images/superbet-logo.JPG')}}" alt="Superbetpredictions"> </td>
+
+                <img style="width:40px; height:40px" src="{{ asset('images/superbet-logo.JPG')}}" alt="Superbetpredictions"> </td>
         
                   {{ config('app.name', 'Superbet Predictions') }}
               </a>
