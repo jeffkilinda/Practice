@@ -1,7 +1,9 @@
       <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
           <div class="container">
               <a class="navbar-brand" href="{{ url('/') }}">
-                  {{ config('app.name', 'Super Predictions') }}
+                <img style="width:225px; height:225px" src="{{ asset('images/superbet-logo.JPG')}}" alt="Superbetpredictions"> </td>
+        
+                  {{ config('app.name', 'Superbet Predictions') }}
               </a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                   <span class="navbar-toggler-icon"></span>
