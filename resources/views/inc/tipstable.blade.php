@@ -4,7 +4,13 @@
 
 <tr align="center">
   <td colspan="7">
-    <h5>{{date("F j, Y")}}   
+    <h5><span class="float-left" >
+      <a class=" btn btn-primary pull-right" href="/top">Top Tips</a>
+    </span>
+    
+    <span class="" >
+      <a class=" btn btn-primary " href="/yesterday">Yesterday winnings</a>
+    </span> 
       
       @if (Auth::user() && Auth::user()->role_id == '1')
       <span class="float-right" >
